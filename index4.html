@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        color: white;
+    }
+    table {
+        text-align: center;
+    }
+    td {
+        width: 55px;
+        height: 15px;
+    }
+</style>
+<body>
+        <script>
+            document.write ("<table>");
+            
+            let baris = parseInt(prompt("jumlah baris :"))
+            let kolom = parseInt(prompt("jumlah kolom :"))
+            let warna1= (prompt("warna 1 (hexadecimal1):"))
+            let warna2 = (prompt("warna 2 (hexadecimal):"))
+            
+            for (i=1; i<=baris; i++){
+            document.write("<tr>");
+                for (n=1; n<=kolom; n++){
+                    let f = i+n
+                    let j = i*n
+                    if (f % 2==0){
+                        document.write("<td bgcolor= '#"+ warna1 +"'>"+j+"</td>")
+                    }
+                    else {
+                        document.write("<td bgcolor= '#"+ warna2 +"'>"+j+"</td>")
+                    }
+                }
+            }
+            document.write("</tr>");
+            document.write ("</table>")
+        </script>
+    </table>
+</body>
+</html>
